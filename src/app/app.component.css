@@ -1,0 +1,12 @@
+.bg-dark {
+  background-color: #20C063!important;
+}
+
+.navbar-nav .mr-auto {
+  position: relative;
+  display: inline-block;
+  padding: 0 12px;
+  font-weight: 600;
+  color: #fff;
+  line-height: 48px;
+}
