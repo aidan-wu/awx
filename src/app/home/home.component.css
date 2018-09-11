@@ -1,11 +1,83 @@
+agm-map {
+    height: 400px;
+}
+
+
+/* Optional: Makes the sample page fill the window. */
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.steps-form-2 {
+    display: table;
+    width: 100%;
+    position: relative; }
+.steps-form-2 .steps-row-2 {
+    display: table-row; }
+.steps-form-2 .steps-row-2:before {
+    top: 14px;
+    bottom: 0;
+    position: absolute;
+    content: " ";
+    width: 100%;
+    height: 2px;
+    background-color: #7283a7; }
+.steps-form-2 .steps-row-2 .steps-step-2 {
+    display: table-cell;
+    text-align: center;
+    position: relative; }
+.steps-form-2 .steps-row-2 .steps-step-2 p {
+    margin-top: 0.5rem; }
+.steps-form-2 .steps-row-2 .steps-step-2 button[disabled] {
+    opacity: 1 !important;
+    filter: alpha(opacity=100) !important; }
+.steps-form-2 .steps-row-2 .steps-step-2 .btn-circle-2 {
+    width: 70px;
+    height: 70px;
+    border: 2px solid #59698D;
+    background-color: white !important;
+    color: #59698D !important;
+    border-radius: 50%;
+    padding: 22px 18px 15px 18px;
+    margin-top: -22px; }
+.steps-form-2 .steps-row-2 .steps-step-2 .btn-circle-2:hover {
+    border: 2px solid #4285F4;
+    color: #4285F4 !important;
+    background-color: white !important; }
+.steps-form-2 .steps-row-2 .steps-step-2 .btn-circle-2 .fa {
+    font-size: 1.7rem; }
+
+
+
+
+
+
+
+
+
+
+
+
+
 .bg-dark {
     background-color: #20c063 !important;
+}
+
+.my-text{
+    color: #FF9800;
+    position: relative;
+    top: -150px;
+
 }
 
 .article-title[_ngcontent-c1], .beta[_ngcontent-c1], .education-page-title[_ngcontent-c1] {
     font-size: 36px;
     letter-spacing: -.02em;
     color: #FF9800;
+    position: relative;
+    top: -150px;
 }
 
 button,

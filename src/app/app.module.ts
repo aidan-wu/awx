@@ -2,6 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
+import {AgmCoreModule } from '@agm/core';
 
 // used to create fake backend
 import { fakeBackendProvider } from './_helpers';
@@ -23,6 +24,7 @@ import { AlertComponent } from './_directives';
 import { AuthGuard } from './_guards';
 import { JwtInterceptor, ErrorInterceptor } from './_helpers';
 import { AlertService, AuthenticationService, UserService } from './_services';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -44,7 +46,12 @@ import { AlertService, AuthenticationService, UserService } from './_services';
     HttpClientModule,
     AppRoutingModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+      BrowserAnimationsModule,
+    AgmCoreModule.forRoot({
+          apiKey: 'AIzaSyBdyJYXOLA9bQV7hEtF7mxqMPWnFIFUyuA'
+    }),
+    BrowserAnimationsModule
   ],
   providers: [
     AuthGuard,
