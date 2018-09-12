@@ -1,52 +1,270 @@
-<!--<nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-
-  <div class="collapse navbar-collapse" id="navbarsExampleDefault">
-
-    <ul class="navbar-nav">
-      <li class="nav-item">
-        <a class="nav-link" routerLink="/home">Why AWX </a>
-      </li>
-
-      <li class="nav-item">
-        <a class="nav-link" routerLink="/investment">Investments</a>
-      </li>
-
-      <li class="nav-item">
-        <a class="nav-link" routerLink="/history-performance">Historical Performance</a>
-      </li>
+<div class="page__header">
 
 
-      <li class="nav-item">
-        <a class="nav-link active" routerLink="/resources">Resources</a>
-      </li>
-
-          <li class="nav-item">
-        <a class="nav-link" routerLink="/login">Login</a>
-      </li>
+    <div nav="">
+        <div id="main-nav" class="main-nav bg-dark">
+            <div class="container display-flex justify-content-space-between">
+                <nav class="display-flex align-items-center">
 
 
 
-      <li class="nav-item">
-        <a class="nav-link" routerLink="/upload">Upload</a>
-      </li>
-      <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" href="http://example.com" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Dropdown</a>
-        <div class="dropdown-menu" aria-labelledby="dropdown01">
-          <a class="dropdown-item" routerLink="/about">About</a>
-          <a class="dropdown-item" routerLink="/upload">Admin Upload</a>
-          <a class="dropdown-item" routerLink="/contact">Something else here</a>
-
+                    <ul class="main-nav__menu ml-150">
+                        <li class="main-nav__menu-item">
+                            <a href="/investing-with-fundrise?cta=Main%20Menu"
+                               class="main-nav__menu-item-link main-nav__menu-item-link--has-dropdown-arrow"
+                               ng-class="[{ 'main-nav__menu-item-link--state-active' : isActive('investing-with-fundrise') || isActive('e-direct-investing') || isActive('fundrise-reviews-and-ratings') }]"
+                               target="_self">Why PropertyChain</a>
+                            <ul class="main-nav__sub-menu main-nav__sub-menu--wide">
+                                <li class="main-nav__sub-menu-item">
+                                    <a routerLink="/contact"
+                                       class="main-nav__sub-menu-item-link main-nav__sub-menu-item-link--has-subtitle"
+                                       ng-class="[{ 'main-nav__sub-menu-item-link--state-active' : isActive('investing-with-fundrise') }]"
+                                       target="_self">
+                                        <span class="display-block epsilon dark">Contacts</span>
+                                        <span class="display-block pt-25 muted">Finally, a real alternative to investing in the stock market</span>
+                                    </a>
+                                </li>
+                                <li class="main-nav__sub-menu-item">
+                                    <a href="/e-direct-investing"
+                                       class="main-nav__sub-menu-item-link main-nav__sub-menu-item-link--has-subtitle bt"
+                                       ng-class="[{ 'main-nav__sub-menu-item-link--state-active' : isActive('e-direct-investing') }]"
+                                       target="_self">
+                                        <span class="display-block epsilon dark">eDirect Technology™</span>
+                                        <span class="display-block pt-25 muted">Meet the innovations behind our powerful new approach.</span>
+                                    </a>
+                                </li>
+                                <li class="main-nav__sub-menu-item">
+                                    <a href="/fundrise-reviews-and-ratings"
+                                       class="main-nav__sub-menu-item-link main-nav__sub-menu-item-link--has-subtitle bt"
+                                       ng-class="[{ 'main-nav__sub-menu-item-link--state-active' : isActive('fundrise-reviews-and-ratings') }]"
+                                       target="_self">
+                                        <span class="display-block epsilon dark">PropertyChain Reviews</span>
+                                        <span class="display-block pt-25 muted">See what investors like you are saying about Property GIC.</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="main-nav__menu-item">
+                            <a href="/investments" class="main-nav__menu-item-link"
+                               ng-class="[{ 'main-nav__menu-item-link--state-active' : isActive('investments') }]"
+                               target="_self">List Property</a>
+                        </li>
+                        <li class="main-nav__menu-item">
+                            <a href="/investments" class="main-nav__menu-item-link"
+                               ng-class="[{ 'main-nav__menu-item-link--state-active' : isActive('investments') }]"
+                               target="_self">Token Sale</a>
+                        </li>
+                        <li class="main-nav__menu-item">
+                            <a href="/historical-performance" class="main-nav__menu-item-link"
+                               ng-class="[{ 'main-nav__menu-item-link--state-active' : isActive('historical-performance') }]"
+                               target="_self">Historical Performance</a>
+                        </li>
+                        <li class="main-nav__menu-item">
+                            <a routerLink="/about"
+                               class="main-nav__menu-item-link main-nav__menu-item-link--has-dropdown-arrow"
+                               ng-class="[{ 'main-nav__menu-item-link--state-active' : isActive('education') }]"
+                               target="_self">Resources</a>
+                            <ul class="main-nav__sub-menu">
+                                <li class="main-nav__sub-menu-item">
+                                    <a href="/education/category/investing-101"
+                                       class="main-nav__sub-menu-item-link"
+                                       ng-class="[{ 'main-nav__sub-menu-item-link--state-active' : isActive('investing-101') }]"
+                                       target="_self">Investing 101</a>
+                                </li>
+                                <li class="main-nav__sub-menu-item">
+                                    <a href="/education/category/advanced-investing"
+                                       class="main-nav__sub-menu-item-link"
+                                       ng-class="[{ 'main-nav__sub-menu-item-link--state-active' : isActive('advanced-investing') }]"
+                                       target="_self">Advanced Investing</a>
+                                </li>
+                                <li class="main-nav__sub-menu-item">
+                                    <a href="/education/category/point-of-view"
+                                       class="main-nav__sub-menu-item-link"
+                                       ng-class="[{ 'main-nav__sub-menu-item-link--state-active' : isActive('point-of-view') }]"
+                                       target="_self">Point of View</a>
+                                </li>
+                                <li class="main-nav__sub-menu-item">
+                                    <a href="/education/faq" class="main-nav__sub-menu-item-link"
+                                       ng-class="[{ 'main-nav__sub-menu-item-link--state-active' : isActive('faq') }]"
+                                       target="_self">Frequently Asked Questions</a>
+                                </li>
+                                <li class="main-nav__sub-menu-item">
+                                    <a routerLink="/about" class="main-nav__sub-menu-item-link"
+                                       ng-class="[{ 'main-nav__sub-menu-item-link--state-active' : isActive('glossary') }]"
+                                       target="_self">Investing Glossary</a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </nav>
+                <div class="main-nav__action-buttons display-flex align-items-center">
+                    <div>
+                        <a href="/login" class="button mr-50" target="_self">Log in</a>
+                        <a href="/start-investing" class="button button-fundrise-orange" target="_self">Get
+                            started</a>
+                    </div>
+                </div>
+            </div>
         </div>
-      </li>
-    </ul>
-    <form class="form-inline my-2 my-lg-0">
-      <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
-      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-    </form>
-  </div>
-</nav> -->
+        <div class="main-nav__placeholder"></div>
+
+        <div class="mobile-nav__placeholder"></div>
+    </div>
+
+
+</div>
 
 <router-outlet></router-outlet>
+
+
+
+
+
+
+<footer _ngcontent-c4="" class="">
+    <div id="ratings-reviews-callout" class="marketing-section text-align-center js-track-scroll-depth">
+
+        <div  class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="cp-metrics__box-right">
+                        <div>
+                            <div id="market-cap-metrics-tabs" class="bs-tabs">
+                                <ul role="tablist" class="nav nav-tabs">
+                                    <li role="presentation" class="active"><a id="market-cap-metrics-tabs-tab-1"
+                                                                              role="tab"
+                                                                              aria-controls="market-cap-metrics-tabs-pane-1"
+                                                                              aria-selected="true" href="#">Search By City</a></li>
+                                </ul>
+                                <div class="tab-content">
+                                    <div id="market-cap-metrics-tabs-pane-1"
+                                         aria-labelledby="market-cap-metrics-tabs-tab-1" role="tabpanel"
+                                         aria-hidden="false" class="tab-pane active fade in">
+                                        <div class="stock-graph"><h3 class="stock-graph__headline">CA  --  San Francisco</h3>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="tab-content">
+                                    <div id="market-cap-metrics-tabs-pane-1"
+                                         aria-labelledby="market-cap-metrics-tabs-tab-1" role="tabpanel"
+                                         aria-hidden="false" class="tab-pane active fade in">
+                                        <div class="stock-graph"><h3 class="stock-graph__headline">NY  --  New York City</h3>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="tab-content">
+                                    <div id="market-cap-metrics-tabs-pane-1"
+                                         aria-labelledby="market-cap-metrics-tabs-tab-1" role="tabpanel"
+                                         aria-hidden="false" class="tab-pane active fade in">
+                                        <div class="stock-graph"><h3 class="stock-graph__headline">NY  --  Jericho</h3>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="cp-metrics__box-right">
+                        <div>
+                            <div id="market-cap-metrics-tabs" class="bs-tabs">
+                                <ul role="tablist" class="nav nav-tabs">
+                                    <li role="presentation" class="active"><a id="market-cap-metrics-tabs-tab-1"
+                                                                              role="tab"
+                                                                              aria-controls="market-cap-metrics-tabs-pane-1"
+                                                                              aria-selected="true" href="#">Social</a></li>
+                                </ul>
+                                <div class="tab-content">
+                                    <div id="market-cap-metrics-tabs-pane-1"
+                                         aria-labelledby="market-cap-metrics-tabs-tab-1" role="tabpanel"
+                                         aria-hidden="false" class="tab-pane active fade in">
+                                        <div class="stock-graph"><h3 class="stock-graph__headline">Facebook</h3>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="tab-content">
+                                    <div id="market-cap-metrics-tabs-pane-1"
+                                         aria-labelledby="market-cap-metrics-tabs-tab-1" role="tabpanel"
+                                         aria-hidden="false" class="tab-pane active fade in">
+                                        <div class="stock-graph"><h3 class="stock-graph__headline">Twitter</h3>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="tab-content">
+                                    <div id="market-cap-metrics-tabs-pane-1"
+                                         aria-labelledby="market-cap-metrics-tabs-tab-1" role="tabpanel"
+                                         aria-hidden="false" class="tab-pane active fade in">
+                                        <div class="stock-graph"><h3 class="stock-graph__headline">Reddit</h3>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            </div>
+
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="cp-metrics__box-right">
+                        <div>
+                            <div id="market-cap-metrics-tabs" class="bs-tabs">
+                                <ul role="tablist" class="nav nav-tabs">
+                                    <li role="presentation" class="active"><a id="market-cap-metrics-tabs-tab-1"
+                                                                              role="tab"
+                                                                              aria-controls="market-cap-metrics-tabs-pane-1"
+                                                                              aria-selected="true" href="#">Company</a></li>
+                                </ul>
+                                <div class="tab-content">
+                                    <div id="market-cap-metrics-tabs-pane-1"
+                                         aria-labelledby="market-cap-metrics-tabs-tab-1" role="tabpanel"
+                                         aria-hidden="false" class="tab-pane active fade in">
+                                        <div class="stock-graph"><h3 class="stock-graph__headline">About us</h3>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="tab-content">
+                                    <div id="market-cap-metrics-tabs-pane-1"
+                                         aria-labelledby="market-cap-metrics-tabs-tab-1" role="tabpanel"
+                                         aria-hidden="false" class="tab-pane active fade in">
+                                        <div class="stock-graph"><h3 class="stock-graph__headline">Blog</h3>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="tab-content">
+                                    <div id="market-cap-metrics-tabs-pane-1"
+                                         aria-labelledby="market-cap-metrics-tabs-tab-1" role="tabpanel"
+                                         aria-hidden="false" class="tab-pane active fade in">
+                                        <div class="stock-graph"><h3 class="stock-graph__headline">Terms & Conditions</h3>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            </div>
+
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+
+    </div>
+
+    <div class="container">
+        <div class="bt"></div>
+    </div>
+
+    <div _ngcontent-c4="" class="pull-right col-xs-12 footer-details text-xs-center">
+        <p _ngcontent-c4="">
+            <span _ngcontent-c4="">Copyright</span> ©
+            <span _ngcontent-c4="">2018</span>
+            <span _ngcontent-c4="">Propy. All rights reserved.</span>
+        </p>
+    </div>
+</footer>
+
+
+
