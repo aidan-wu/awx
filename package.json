@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve",
+    "start": "ng serve --port 80",
     "startproxy": "ng serve --proxy-config proxy.conf.json",
     "build": "ng build",
     "test": "ng test",
@@ -23,6 +23,7 @@
     "@angular/material": "^6.4.7",
     "@angular/platform-browser": "^6.0.2",
     "@angular/platform-browser-dynamic": "^6.0.2",
+    "@ng-bootstrap/ng-bootstrap": "^2.1.2",
     "@angular/router": "^6.0.2",
     "core-js": "^2.5.5",
     "npm": "^5.6.0",

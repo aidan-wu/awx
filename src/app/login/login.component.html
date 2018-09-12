@@ -1,22 +1,44 @@
-﻿<h2>Login</h2>
-<form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
-    <div class="form-group">
-        <label for="username">Username</label>
-        <input type="text" formControlName="username" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.username.errors }" />
-        <div *ngIf="submitted && f.username.errors" class="invalid-feedback">
-            <div *ngIf="f.username.errors.required">Username is required</div>
+﻿<div _ngcontent-c34="" class="row login-holder">
+    <div _ngcontent-c34="" class="col-xs-12 col-sm-10 col-sm-offset-1 col-md-6 col-md-offset-3 col-lg-4 col-lg-offset-4">
+        <form _ngcontent-c34="" class="propy-form ng-untouched ng-pristine ng-invalid" novalidate="">
+            <h3 _ngcontent-c34="" class="text-center">Sign in</h3>
+            <div _ngcontent-c34="" class="form-group">
+                <input _ngcontent-c34="" class="form-control propy-control ng-untouched ng-pristine ng-invalid" formcontrolname="email" id="email" type="email" placeholder="Your Email">
+                <!---->
+            </div>
+            <div _ngcontent-c34="" class="form-group">
+
+                    <input _ngcontent-c34="" class="form-control propy-control ng-untouched ng-pristine ng-invalid" formcontrolname="password" id="password" type="password" placeholder="Password">
+
+
+            </div>
+            <!---->
+            <div _ngcontent-c34="" class="form-group checkbox form-check abc-checkbox">
+                <input _ngcontent-c34="" class="form-check-input ng-untouched ng-pristine ng-valid" formcontrolname="rememberMe" id="rememberMeCheckbox" type="checkbox">
+                <label _ngcontent-c34="" class="center-block form-check-label" for="rememberMeCheckbox">
+                    Remember me
+                </label>
+            </div>
+            <button _ngcontent-c34="" class="btn btn-block propy-control button-big" >
+                Sign in
+            </button>
+            <div _ngcontent-c34="" class="text-center">
+                <div _ngcontent-c34="" class="form-group" id="forgot-password">
+                    <a _ngcontent-c34="" href="/forgot">Forgot your password?</a>&nbsp;&nbsp;&nbsp;&nbsp;<a _ngcontent-c34="" routerLink="/register">Register</a>
+                </div>
+            </div>
+            <!----><hr _ngcontent-c34="" class="separator">
+            <!----><div _ngcontent-c34="" class="social">
+            <p _ngcontent-c34="" class="title text-center">
+                <span _ngcontent-c34="" class="text-capitalize">or&nbsp;</span>connect with</p>
+            <button _ngcontent-c34="" _nghost-c36=""><button _ngcontent-c36="" class="btn btn-block btn-social btn-facebook btn-lg" type="button">
+                <span _ngcontent-c36="" class="fa"></span>
+                <span _ngcontent-c36="" class="text">Facebook</span>
+            </button></button>
+
         </div>
+
+        </form>
     </div>
-    <div class="form-group">
-        <label for="password">Password</label>
-        <input type="password" formControlName="password" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.password.errors }" />
-        <div *ngIf="submitted && f.password.errors" class="invalid-feedback">
-            <div *ngIf="f.password.errors.required">Password is required</div>
-        </div>
-    </div>
-    <div class="form-group">
-        <button [disabled]="loading" class="btn btn-primary">Login</button>
-        <img *ngIf="loading" src="data:image/gif;base64,R0lGODlhEAAQAPIAAP///wAAAMLCwkJCQgAAAGJiYoKCgpKSkiH/C05FVFNDQVBFMi4wAwEAAAAh/hpDcmVhdGVkIHdpdGggYWpheGxvYWQuaW5mbwAh+QQJCgAAACwAAAAAEAAQAAADMwi63P4wyklrE2MIOggZnAdOmGYJRbExwroUmcG2LmDEwnHQLVsYOd2mBzkYDAdKa+dIAAAh+QQJCgAAACwAAAAAEAAQAAADNAi63P5OjCEgG4QMu7DmikRxQlFUYDEZIGBMRVsaqHwctXXf7WEYB4Ag1xjihkMZsiUkKhIAIfkECQoAAAAsAAAAABAAEAAAAzYIujIjK8pByJDMlFYvBoVjHA70GU7xSUJhmKtwHPAKzLO9HMaoKwJZ7Rf8AYPDDzKpZBqfvwQAIfkECQoAAAAsAAAAABAAEAAAAzMIumIlK8oyhpHsnFZfhYumCYUhDAQxRIdhHBGqRoKw0R8DYlJd8z0fMDgsGo/IpHI5TAAAIfkECQoAAAAsAAAAABAAEAAAAzIIunInK0rnZBTwGPNMgQwmdsNgXGJUlIWEuR5oWUIpz8pAEAMe6TwfwyYsGo/IpFKSAAAh+QQJCgAAACwAAAAAEAAQAAADMwi6IMKQORfjdOe82p4wGccc4CEuQradylesojEMBgsUc2G7sDX3lQGBMLAJibufbSlKAAAh+QQJCgAAACwAAAAAEAAQAAADMgi63P7wCRHZnFVdmgHu2nFwlWCI3WGc3TSWhUFGxTAUkGCbtgENBMJAEJsxgMLWzpEAACH5BAkKAAAALAAAAAAQABAAAAMyCLrc/jDKSatlQtScKdceCAjDII7HcQ4EMTCpyrCuUBjCYRgHVtqlAiB1YhiCnlsRkAAAOwAAAAAAAAAAAA==" />
-        <a [routerLink]="['/register']" class="btn btn-link">Register</a>
-    </div>
-</form>
+
+</div>

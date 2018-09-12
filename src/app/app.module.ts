@@ -2,7 +2,6 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
-import {AgmCoreModule } from '@agm/core';
 
 // used to create fake backend
 import { fakeBackendProvider } from './_helpers';
@@ -25,6 +24,8 @@ import { AuthGuard } from './_guards';
 import { JwtInterceptor, ErrorInterceptor } from './_helpers';
 import { AlertService, AuthenticationService, UserService } from './_services';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { AgmCoreModule, GoogleMapsAPIWrapper } from '@agm/core';
 
 @NgModule({
   declarations: [
@@ -45,19 +46,21 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     BrowserModule,
     HttpClientModule,
     AppRoutingModule,
-    FormsModule,
     ReactiveFormsModule,
       BrowserAnimationsModule,
     AgmCoreModule.forRoot({
-          apiKey: 'AIzaSyBdyJYXOLA9bQV7hEtF7mxqMPWnFIFUyuA'
+          apiKey:'AIzaSyDjPikqPY581dPlqhWIgSw5fvVH0dzfjnQ'
     }),
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+      FormsModule,
+      NgbModule.forRoot()
   ],
   providers: [
     AuthGuard,
     AlertService,
     AuthenticationService,
     UserService,
+      GoogleMapsAPIWrapper,
     { provide: HTTP_INTERCEPTORS, useClass: JwtInterceptor, multi: true },
     { provide: HTTP_INTERCEPTORS, useClass: ErrorInterceptor, multi: true },
 

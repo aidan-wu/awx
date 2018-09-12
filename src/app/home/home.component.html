@@ -16,11 +16,11 @@
                                target="_self">Why PropertyChain</a>
                             <ul class="main-nav__sub-menu main-nav__sub-menu--wide">
                                 <li class="main-nav__sub-menu-item">
-                                    <a href="/investing-with-fundrise"
+                                    <a routerLink="/contact"
                                        class="main-nav__sub-menu-item-link main-nav__sub-menu-item-link--has-subtitle"
                                        ng-class="[{ 'main-nav__sub-menu-item-link--state-active' : isActive('investing-with-fundrise') }]"
                                        target="_self">
-                                        <span class="display-block epsilon dark">The Service</span>
+                                        <span class="display-block epsilon dark">Contacts</span>
                                         <span class="display-block pt-25 muted">Finally, a real alternative to investing in the stock market</span>
                                     </a>
                                 </li>
@@ -39,7 +39,7 @@
                                        ng-class="[{ 'main-nav__sub-menu-item-link--state-active' : isActive('fundrise-reviews-and-ratings') }]"
                                        target="_self">
                                         <span class="display-block epsilon dark">PropertyChain Reviews</span>
-                                        <span class="display-block pt-25 muted">See what investors like you are saying about Fundrise.</span>
+                                        <span class="display-block pt-25 muted">See what investors like you are saying about Property GIC.</span>
                                     </a>
                                 </li>
                             </ul>
@@ -47,7 +47,7 @@
                         <li class="main-nav__menu-item">
                             <a href="/investments" class="main-nav__menu-item-link"
                                ng-class="[{ 'main-nav__menu-item-link--state-active' : isActive('investments') }]"
-                               target="_self">Investments</a>
+                               target="_self">Token Sale</a>
                         </li>
                         <li class="main-nav__menu-item">
                             <a href="/historical-performance" class="main-nav__menu-item-link"
@@ -55,7 +55,7 @@
                                target="_self">Historical Performance</a>
                         </li>
                         <li class="main-nav__menu-item">
-                            <a href="/education"
+                            <a routerLink="/about"
                                class="main-nav__menu-item-link main-nav__menu-item-link--has-dropdown-arrow"
                                ng-class="[{ 'main-nav__menu-item-link--state-active' : isActive('education') }]"
                                target="_self">Resources</a>
@@ -84,7 +84,7 @@
                                        target="_self">Frequently Asked Questions</a>
                                 </li>
                                 <li class="main-nav__sub-menu-item">
-                                    <a href="/education/glossary" class="main-nav__sub-menu-item-link"
+                                    <a routerLink="/about" class="main-nav__sub-menu-item-link"
                                        ng-class="[{ 'main-nav__sub-menu-item-link--state-active' : isActive('glossary') }]"
                                        target="_self">Investing Glossary</a>
                                 </li>
@@ -103,124 +103,6 @@
         </div>
         <div class="main-nav__placeholder"></div>
 
-        <nav class="mobile-nav">
-
-
-            <div class="mobile-nav__top-bar">
-                <div class="mobile-nav__top-bar-inner container display-flex align-items-center">
-                    <div>
-                        <a class="mobile-nav__logo" href="/" target="_self"></a>
-                    </div>
-                    <div>
-                        <a class="body-text-color mobile-nav__toggle" ng-click="toggle()">
-                            <svg class="display-block" width="16px" height="16px" viewBox="0 0 16 16"
-                                 version="1.1" xmlns="http://www.w3.org/2000/svg">
-                                <g stroke="none" stroke-width="1" fill="currentColor" fill-rule="evenodd">
-                                    <rect x="0" y="2" width="16" height="2" rx="1"></rect>
-                                    <rect x="0" y="7" width="16" height="2" rx="1"></rect>
-                                    <rect x="0" y="12" width="16" height="2" rx="1"></rect>
-                                </g>
-                            </svg>
-                        </a>
-                    </div>
-                </div>
-            </div>
-            <div id="mobile-nav-flyout" ng-class="{'mobile-nav__flyout--state-active': open}"
-                 class="mobile-nav__flyout mobile-nav__flyout--state-active">
-                <div class="mobile-nav__flyout-header display-flex align-items-center justify-content-flex-end bb">
-                    <a ng-click="toggle()"
-                       class="body-text-color mobile-nav__toggle display-flex align-items-center justify-content-center">
-                        <svg class="eta" width="1em" height="1em">
-                            <line x1="0" y1="0" x2="1em" y2="1em" stroke-linecap="round" stroke-width="2"
-                                  stroke="currentColor"></line>
-                            <line x1="1em" y1="0" x2="0" y2="1em" stroke-linecap="round" stroke-width="2"
-                                  stroke="currentColor"></line>
-                        </svg>
-                    </a>
-                </div>
-                <div class="mobile-nav__flyout-content">
-                    <div class="pt-100 pb-100 bb">
-                        <a href="/start-investing" class="button button-fundrise-orange button-block delta"
-                           target="_self">Get started</a>
-                        <a href="/login" class="button button-block mt-50" target="_self">Log in</a>
-                    </div>
-
-
-                    <ul class="mobile-nav__item-list pt-100">
-                        <li class="mobile-nav__item">
-                            <a href="/investing-with-fundrise" class="mobile-nav__item-link"
-                               ng-class="[{ 'mobile-nav__item-link--state-active' : isActive('investing-with-fundrise') || isActive('e-direct-investing') || isActive('fundrise-reviews-and-ratings') }]"
-                               target="_self">Why PropertyChain</a>
-                            <ul>
-                                <li class="mobile-nav__sub-item">
-                                    <a href="/investing-with-fundrise" class="mobile-nav__sub-item-link"
-                                       ng-class="[{ 'mobile-nav__sub-item-link--state-active' : isActive('investing-with-fundrise') }]"
-                                       target="_self">The Service</a>
-                                </li>
-                                <li class="mobile-nav__sub-item">
-                                    <a href="/e-direct-investing" class="mobile-nav__sub-item-link"
-                                       ng-class="[{ 'mobile-nav__sub-item-link--state-active' : isActive('e-direct-investing') }]"
-                                       target="_self">eDirect™ Technology</a>
-                                </li>
-                                <li class="mobile-nav__sub-item">
-                                    <a href="/fundrise-reviews-and-ratings"
-                                       class="mobile-nav__sub-item-link"
-                                       ng-class="[{ 'mobile-nav__sub-item-link--state-active' : isActive('fundrise-reviews-and-ratings') }]"
-                                       target="_self">PropertyChain Reviews</a>
-                                </li>
-                            </ul>
-                        </li>
-                        <li class="mobile-nav__item">
-                            <a href="/investments" class="mobile-nav__item-link"
-                               ng-class="[{ 'mobile-nav__item-link--state-active' : isActive('investments') }]"
-                               target="_self">Investments</a>
-                        </li>
-                        <li class="mobile-nav__item">
-                            <a href="/historical-performance" class="mobile-nav__item-link"
-                               ng-class="[{ 'mobile-nav__item-link--state-active' : isActive('historical-performance') }]"
-                               target="_self">Historical Performance</a>
-                        </li>
-                        <li class="mobile-nav__item">
-                            <a href="/education" class="mobile-nav__item-link"
-                               ng-class="[{ 'mobile-nav__item-link--state-active' : isActive('education') }]"
-                               target="_self">Resources</a>
-                            <ul>
-                                <li class="mobile-nav__sub-item">
-                                    <a href="/education/category/investing-101"
-                                       class="mobile-nav__sub-item-link"
-                                       ng-class="[{ 'mobile-nav__sub-item-link--state-active' : isActive('investing-101') }]"
-                                       target="_self">Investing 101</a>
-                                </li>
-                                <li class="mobile-nav__sub-item">
-                                    <a href="/education/category/advanced-investing"
-                                       class="mobile-nav__sub-item-link"
-                                       ng-class="[{ 'mobile-nav__sub-item-link--state-active' : isActive('advanced-investing') }]"
-                                       target="_self">Advanced Investing</a>
-                                </li>
-                                <li class="mobile-nav__sub-item">
-                                    <a href="/education/category/point-of-view"
-                                       class="mobile-nav__sub-item-link"
-                                       ng-class="[{ 'mobile-nav__sub-item-link--state-active' : isActive('point-of-view') }]"
-                                       target="_self">Point of View</a>
-                                </li>
-                                <li class="mobile-nav__sub-item">
-                                    <a href="/education/faq" class="mobile-nav__sub-item-link"
-                                       ng-class="[{ 'mobile-nav__sub-item-link--state-active' : isActive('faq') }]"
-                                       target="_self">Frequently Asked Questions</a>
-                                </li>
-                                <li class="mobile-nav__sub-item">
-                                    <a href="/education/glossary" class="mobile-nav__sub-item-link"
-                                       ng-class="[{ 'mobile-nav__sub-item-link--state-active' : isActive('glossary') }]"
-                                       target="_self">Investing Glossary</a>
-                                </li>
-                            </ul>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-            <div ng-click="toggle()" ng-class="{'mobile-nav__flyout-dimmer--state-active': open}"
-                 class="mobile-nav__flyout-dimmer mobile-nav__flyout-dimmer--state-active"></div>
-        </nav>
         <div class="mobile-nav__placeholder"></div>
     </div>
 
@@ -255,8 +137,8 @@
             <div style="margin: 1em auto; max-width: 57rem;">
                 <div >
                     <img class="" width="100" height="50" align="middle"
-                         lazy-src="/assets/img/investment.png"
-                         src="/assets/img/investment.png">
+                         lazy-src="/assets/img/propertychain.png"
+                         src="/assets/img/propertychain.png">
 
                 </div>
             </div>
@@ -272,6 +154,64 @@
 
 
     <div class="container">
+        <div class="bt"></div>
+    </div>
+
+    <div id="e-direct-investing" class="marketing-section text-align-center js-track-scroll-depth">
+        <div class="container">
+            <div class="container-fluid">
+                <div class='row'>
+                    <input _ngcontent-c6="" autocapitalize="off" autocorrect="off" class="form-control propy-control ng-no-margin col-sm-7" size="100" spellcheck="off" type="text" placeholder="Enter a city or address..." autocomplete="off">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+                    <button (click)='updateOnMap()' type="submit" class="btn btn-primary">Search</button>
+                </div>
+            </div>
+
+ <br/><br/>
+
+
+                    <agm-map
+                            [latitude]="lat"
+                            [longitude]="lng"
+                            [zoom]="zoom"
+                            [disableDefaultUI]="false"
+                            [zoomControl]="false"
+                            (mapClick)="mapClicked($event)">
+
+                        <agm-marker
+                                *ngFor="let m of markers; let i = index"
+                                (markerClick)="clickedMarker(m.label, i)"
+                                [latitude]="m.lat"
+                                [longitude]="m.lng"
+                                [label]="m.label"
+                                [markerDraggable]="m.draggable"
+                                [iconUrl]="m.icon"
+                                (dragEnd)="markerDragEnd(m, $event)">
+
+
+                            <agm-info-window>
+                                <strong>InfoWindow content</strong>
+                            </agm-info-window>
+
+                        </agm-marker>
+
+                        <agm-circle [latitude]="lat + 0.3" [longitude]="lng"
+                                    [radius]="5000"
+                                    [fillColor]="'red'"
+                                    [circleDraggable]="true"
+                                    [editable]="true">
+                        </agm-circle>
+
+                    </agm-map>
+
+
+        </div>
+
+    </div>
+
+
+
+    <div class="container">
         <!-- Example row of columns -->
         <div class="row">
 
@@ -283,35 +223,35 @@
                 <ul class="list-group mb-3">
                     <li class="list-group-item d-flex justify-content-between lh-condensed">
                         <div>
-                            <h6 class="my-0">Product name</h6>
-                            <small class="text-muted">Brief description</small>
+                            <h6 class="my-0">29 Village Dr</h6>
+                            <small class="text-muted">Own 8% shares</small>
                         </div>
-                        <span class="text-muted">$12</span>
+                        <span class="text-muted">PIC: 12,000</span>
                     </li>
                     <li class="list-group-item d-flex justify-content-between lh-condensed">
                         <div>
-                            <h6 class="my-0">Second product</h6>
-                            <small class="text-muted">Brief description</small>
+                            <h6 class="my-0">431 Woodbridge Ln</h6>
+                            <small class="text-muted">Own 20% shares</small>
                         </div>
-                        <span class="text-muted">$8</span>
+                        <span class="text-muted">PIC: 18,000</span>
                     </li>
                     <li class="list-group-item d-flex justify-content-between lh-condensed">
                         <div>
-                            <h6 class="my-0">Third item</h6>
-                            <small class="text-muted">Brief description</small>
+                            <h6 class="my-0">33 Lake Dr</h6>
+                            <span class="muted-primary">Own 90% shares</span>
                         </div>
-                        <span class="text-muted">$5</span>
+                        <span class="text-muted">PIC: 90,000</span>
                     </li>
                     <li class="list-group-item d-flex justify-content-between bg-light">
                         <div class="text-success">
-                            <h6 class="my-0">Promo code</h6>
-                            <small>EXAMPLECODE</small>
+                            <h6 class="my-0">Coupon Code</h6>
+                            <small>986532</small>
                         </div>
-                        <span class="text-success">-$5</span>
+                        <span class="text-success">PIC: 1000</span>
                     </li>
                     <li class="list-group-item d-flex justify-content-between">
-                        <span>Total (USD)</span>
-                        <strong>$20</strong>
+                        <span>Total PIC Coins</span>
+                        <strong>121,000</strong>
                     </li>
                 </ul>
 
@@ -373,11 +313,11 @@
                                             <div class="cardPhoto  backgroundPulse " style="height:160px;width:100%;"
                                                  data-reactid="66">
                                                 <picture data-reactid="67">
-                                                    <source srcset="//thumbs.trulia-cdn.com/pictures/thumbs_6/zillowstatic/ISyz15s6j5dpgi1000000000.jpg"
+                                                    <source srcset="/assets/img/ISyz15s6j5dpgi1000000000.jpg"
                                                             media="(min-resolution: 192dpi), (-webkit-min-device-pixel-ratio: 2)"
                                                             data-reactid="68">
                                                     <img class="cardPhoto  backgroundPulse "
-                                                         src="//thumbs.trulia-cdn.com/pictures/thumbs_3/ps.111/1/e/d/b/picture-uh=af6399c246db4f13e5ac5fedbbce5ca-ps=1edb3cebfc6b255b975cf68aea495.jpg"
+                                                         src="/assets/img/ISyz15s6j5dpgi1000000000.jpg"
                                                          style="height:160px;width:100%;"
                                                          alt="29 Village Dr, Jericho, NY" data-reactid="69">
                                                 </picture>
@@ -394,7 +334,7 @@
                                                  data-reactid="74">
                                                 <div data-reactid="75">
                                                     <span class="cardPrice h5 man pan typeEmphasize noWrap typeTruncate"
-                                                          data-reactid="76">$3,800</span>
+                                                          data-reactid="76">$1,500,000</span>
                                                     <!-- react-empty: 77 -->
                                                 </div>
                                                 <div data-reactid="78">
@@ -489,11 +429,11 @@
                                             <div class="cardPhoto  backgroundPulse " style="height:160px;width:100%;"
                                                  data-reactid="117">
                                                 <picture data-reactid="118">
-                                                    <source srcset="//thumbs.trulia-cdn.com/pictures/thumbs_6/zillowstatic/ISek0yix5i399q0000000000.jpg"
+                                                    <source srcset="/assets/img/ISek0yix5i399q0000000000.jpg"
                                                             media="(min-resolution: 192dpi), (-webkit-min-device-pixel-ratio: 2)"
                                                             data-reactid="119">
                                                     <img class="cardPhoto  backgroundPulse "
-                                                         src="//thumbs.trulia-cdn.com/pictures/thumbs_3/ps.111/6/c/2/7/picture-uh=bb7eb2397631d045cd1db95d664ca417-ps=6c27c7613ace8ea37d355d654cc50f0.jpg"
+                                                         src="/assets/img/ISek0yix5i399q0000000000.jpg"
                                                          style="height:160px;width:100%;"
                                                          alt="431 Woodbridge Ln, Jericho, NY" data-reactid="120">
                                                 </picture>
@@ -510,7 +450,7 @@
                                                  data-reactid="125">
                                                 <div data-reactid="126">
                                                     <span class="cardPrice h5 man pan typeEmphasize noWrap typeTruncate"
-                                                          data-reactid="127">$3,900</span>
+                                                          data-reactid="127">$900,000</span>
                                                     <!-- react-empty: 128 -->
                                                 </div>
                                                 <div data-reactid="129">
@@ -605,11 +545,11 @@
                                             <div class="cardPhoto  backgroundPulse " style="height:160px;width:100%;"
                                                  data-reactid="117">
                                                 <picture data-reactid="118">
-                                                    <source srcset="//thumbs.trulia-cdn.com/pictures/thumbs_6/zillowstatic/ISyzpn2af4qx9q1000000000.jpg"
+                                                    <source srcset="/assets/img/ISyzpn2af4qx9q1000000000.jpg"
                                                             media="(min-resolution: 192dpi), (-webkit-min-device-pixel-ratio: 2)"
                                                             data-reactid="119">
                                                     <img class="cardPhoto  backgroundPulse "
-                                                         src="//thumbs.trulia-cdn.com/pictures/thumbs_3/ps.111/6/c/2/7/picture-uh=bb7eb2397631d045cd1db95d664ca417-ps=6c27c7613ace8ea37d355d654cc50f0.jpg"
+                                                         src="/assets/img/ISyzpn2af4qx9q1000000000.jpg"
                                                          style="height:160px;width:100%;"
                                                          alt="431 Woodbridge Ln, Jericho, NY" data-reactid="120">
                                                 </picture>
@@ -626,7 +566,7 @@
                                                  data-reactid="125">
                                                 <div data-reactid="126">
                                                     <span class="cardPrice h5 man pan typeEmphasize noWrap typeTruncate"
-                                                          data-reactid="127">$3,900</span>
+                                                          data-reactid="127">$1,000,000</span>
                                                     <!-- react-empty: 128 -->
                                                 </div>
                                                 <div data-reactid="129">
@@ -676,6 +616,18 @@
     </div> <!-- /container -->
 
 </main>
+
+<!--
+<div>
+    <input _ngcontent-c6="" autocapitalize="off" autocorrect="off" class="form-control propy-control ng-no-margin col-sm-7" size="100" spellcheck="off" type="text" placeholder="Enter a city or address..." autocomplete="off">
+
+    <button (click)='updateOnMap()' type="submit" class="btn btn-primary col-sm-2">Search</button>
+</div>-->
+
+
+
+
+
 
 
 
@@ -1034,26 +986,7 @@
             </div>
         </div>
 
-        <div class="container">
-            <div class="bt"></div>
-        </div>
 
-        <div id="ratings-reviews-callout" class="marketing-section text-align-center js-track-scroll-depth">
-            <div class="container">
-                <h1>map</h1>
-
-
-
-                <agm-map [latitude]="latitude" [longitude]="longitude" (mapClick)="onChoseLocation($event)" [zoom]="16">
-                    <agm-marker
-                            [latitude]="latitude"
-                            [longitude]="longitude"
-                    ></agm-marker>
-                </agm-map>
-
-            </div>
-
-        </div>
 
         <div class="container">
             <div class="bt"></div>
@@ -2026,170 +1959,6 @@
         </div>
 
 
-        <div class="container-fluid">
-
-            <script>
-
-
-                // Tooltips Initialization
-                $(function () {
-                    $('[data-toggle="tooltip"]').tooltip()
-                })
-
-                // Steppers
-                $(document).ready(function () {
-                    var navListItems = $('div.setup-panel-2 div a'),
-                        allWells = $('.setup-content-2'),
-                        allNextBtn = $('.nextBtn-2'),
-                        allPrevBtn = $('.prevBtn-2');
-
-                    allWells.hide();
-
-                    navListItems.click(function (e) {
-                        e.preventDefault();
-                        var $target = $($(this).attr('href')),
-                            $item = $(this);
-
-                        if (!$item.hasClass('disabled')) {
-                            navListItems.removeClass('btn-amber').addClass('btn-blue-grey');
-                            $item.addClass('btn-amber');
-                            allWells.hide();
-                            $target.show();
-                            $target.find('input:eq(0)').focus();
-                        }
-                    });
-
-                    allPrevBtn.click(function(){
-                        var curStep = $(this).closest(".setup-content-2"),
-                            curStepBtn = curStep.attr("id"),
-                            prevStepSteps = $('div.setup-panel-2 div a[href="#' + curStepBtn + '"]').parent().prev().children("a");
-
-                        prevStepSteps.removeAttr('disabled').trigger('click');
-                    });
-
-                    allNextBtn.click(function(){
-                        var curStep = $(this).closest(".setup-content-2"),
-                            curStepBtn = curStep.attr("id"),
-                            nextStepSteps = $('div.setup-panel-2 div a[href="#' + curStepBtn + '"]').parent().next().children("a"),
-                            curInputs = curStep.find("input[type='text'],input[type='url']"),
-                            isValid = true;
-
-                        $(".form-group").removeClass("has-error");
-                        for(var i=0; i< curInputs.length; i++){
-                            if (!curInputs[i].validity.valid){
-                                isValid = false;
-                                $(curInputs[i]).closest(".form-group").addClass("has-error");
-                            }
-                        }
-
-                        if (isValid)
-                            nextStepSteps.removeAttr('disabled').trigger('click');
-                    });
-
-                    $('div.setup-panel-2 div a.btn-amber').trigger('click');
-                });
-            </script>
-
-            <h2 class="text-center font-bold pt-4 pb-5 mb-5"><strong>Registration form with steps</strong></h2>
-
-            <!-- Stepper -->
-            <div class="steps-form-2">
-                <div class="steps-row-2 setup-panel-2 d-flex justify-content-between">
-                    <div class="steps-step-2">
-                        <a href="#step-1" type="button" class="btn btn-amber btn-circle-2 waves-effect ml-0" data-toggle="tooltip" data-placement="top" title="Basic Information"><i class="fa fa-folder-open-o" aria-hidden="true"></i></a>
-                    </div>
-                    <div class="steps-step-2">
-                        <a href="#step-2" type="button" class="btn btn-blue-grey btn-circle-2 waves-effect" data-toggle="tooltip" data-placement="top" title="Personal Data"><i class="fa fa-pencil" aria-hidden="true"></i></a>
-                    </div>
-                    <div class="steps-step-2">
-                        <a href="#step-3" type="button" class="btn btn-blue-grey btn-circle-2 waves-effect" data-toggle="tooltip" data-placement="top" title="Terms and Conditions"><i class="fa fa-photo" aria-hidden="true"></i></a>
-                    </div>
-                    <div class="steps-step-2">
-                        <a href="#step-4" type="button" class="btn btn-blue-grey btn-circle-2 waves-effect mr-0" data-toggle="tooltip" data-placement="top" title="Finish"><i class="fa fa-check" aria-hidden="true"></i></a>
-                    </div>
-                </div>
-            </div>
-
-            <!-- First Step -->
-            <form role="form" action="" method="post">
-                <div class="row setup-content-2" id="step-1">
-                    <div class="col-md-12">
-                        <h3 class="font-weight-bold pl-0 my-4"><strong>Basic Information</strong></h3>
-                        <div class="form-group md-form">
-                            <label for="yourEmail-2" data-error="wrong" data-success="right">Email</label>
-                            <input id="yourEmail-2" type="email" required="required" class="form-control validate">
-                        </div>
-                        <div class="form-group md-form">
-                            <label for="yourUsername-2" data-error="wrong" data-success="right">Username</label>
-                            <input id="yourUsername-2" type="text" required="required" class="form-control validate">
-                        </div>
-                        <div class="form-group md-form mt-3">
-                            <label for="yourPassword-2" data-error="wrong" data-success="right">Password</label>
-                            <input id="yourPassword-2" type="password" required="required" class="form-control validate">
-                        </div>
-                        <div class="form-group md-form mt-3">
-                            <label for="repeatPassword-2" data-error="wrong" data-success="right">Repeat Password</label>
-                            <input id="repeatPassword-2" type="password" required="required" class="form-control validate">
-                        </div>
-                        <button class="btn btn-mdb-color btn-rounded nextBtn-2 float-right" type="button">Next</button>
-                    </div>
-                </div>
-
-                <!-- Second Step -->
-                <div class="row setup-content-2" id="step-2">
-                    <div class="col-md-12">
-                        <h3 class="font-weight-bold pl-0 my-4"><strong>Personal Data</strong></h3>
-                        <div class="form-group md-form">
-                            <label for="yourName-2" data-error="wrong" data-success="right">First Name</label>
-                            <input id="yourName-2" type="text" required="required" class="form-control validate">
-                        </div>
-                        <div class="form-group md-form mt-3">
-                            <label for="secondName-2" data-error="wrong" data-success="right">Second Name</label>
-                            <input id="secondName-2" type="text" required="required" class="form-control validate">
-                        </div>
-                        <div class="form-group md-form">
-                            <label for="surname-2" data-error="wrong" data-success="right">Surname</label>
-                            <input id="surname-2" type="text" required="required" class="form-control validate">
-                        </div>
-                        <div class="form-group md-form mt-3">
-                            <label for="yourAddress-2" data-error="wrong" data-success="right">Address</label>
-                            <textarea id="yourAddress-2" type="text" required="required" rows="2" class="md-textarea validate form-control"></textarea>
-                        </div>
-                        <button class="btn btn-mdb-color btn-rounded prevBtn-2 float-left" type="button">Previous</button>
-                        <button class="btn btn-mdb-color btn-rounded nextBtn-2 float-right" type="button">Next</button>
-                    </div>
-                </div>
-
-                <!-- Third Step -->
-                <div class="row setup-content-2" id="step-3">
-                    <div class="col-md-12">
-                        <h3 class="font-weight-bold pl-0 my-4"><strong>Terms and conditions</strong></h3>
-                        <div class="form-check">
-                            <input type="checkbox" id="checkbox111" class="form-check-input">
-                            <label for="checkbox111" class="form-check-label">I agree to the terms and conditions</label>
-                        </div>
-                        <div class="form-check">
-                            <input type="checkbox" id="checkbox112" class="form-check-input">
-                            <label for="checkbox112" class="form-check-label">I want to receive newsletter</label>
-                        </div>
-                        <button class="btn btn-mdb-color btn-rounded prevBtn-2 float-left" type="button">Previous</button>
-                        <button class="btn btn-mdb-color btn-rounded nextBtn-2 float-right" type="button">Next</button>
-                    </div>
-                </div>
-
-                <!-- Fourth Step -->
-                <div class="row setup-content-2" id="step-4">
-                    <div class="col-md-12">
-                        <h3 class="font-weight-bold pl-0 my-4"><strong>Finish</strong></h3>
-                        <h2 class="text-center font-weight-bold my-4">Registration completed!</h2>
-                        <button class="btn btn-mdb-color btn-rounded prevBtn-2 float-left" type="button">Previous</button>
-                        <button class="btn btn-success btn-rounded float-right" type="submit">Submit</button>
-                    </div>
-                </div>
-            </form>
-
-        </div>
-
 
 
         <div id="starter-portfolio-bottom-cta" class="marketing-section js-track-scroll-depth"
@@ -2198,7 +1967,7 @@
                  lazy-src="https://d10cq78zmnjvsx.cloudfront.net/images/marketing/ria/investments-starter-teaser-bg-fullsize.jpg"></div>
             <div class="or-divider zeta-smo">OR</div>
             <div class="container text-align-center position-relative">
-                <div class="reversed font-weight-lighter-md gamma-md line-height-125">Take Fundrise for a
+                <div class="reversed font-weight-lighter-md gamma-md line-height-125">Take Property Global Investment Chain for a
                     test drive
                 </div>
                 <h2 class="line-height-125 gamma beta-md text-color-white">
@@ -2262,7 +2031,7 @@
                         </div>
                     </div>
                     <div class="text-align-center delta mt-100-smo mt-150-mdo">
-                        <a class="button bg-color-white gamma-md" href="mailto:investments@fundrise.com"
+                        <a class="button bg-color-white gamma-md" href="mailto:investments@propertygic.com"
                            target="_blank">
 
 
@@ -2273,7 +2042,7 @@
                             </svg>
 
 
-                            investments@fundrise.com
+                            investments@propertygic.com
                         </a>
                     </div>
                 </div>
