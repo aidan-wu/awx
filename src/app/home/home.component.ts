@@ -19,17 +19,17 @@ export class HomeComponent implements OnInit {
     public myIcon: any = {
         url: '/assets/img/house.png',
         scaledSize: {
-            width: 40,
-            height: 20
-        }
+            width: 78,
+            height: 52
+        },labelOrigin:{x:40,y:20}
     };
 
     public soldIcon: any = {
         url: '/assets/img/soldHouse.png',
         scaledSize: {
-            width: 40,
-            height: 20
-        }
+            width: 78,
+            height: 52
+        },labelOrigin:{x:40,y:20}
     };
 
     public location: Location = {
@@ -52,7 +52,7 @@ export class HomeComponent implements OnInit {
                 fontFamily: '',
                 fontSize: '14px',
                 fontWeight: 'bold',
-                text: '$1.5 M'
+                text: '$1.0 M'
             },
             draggable: true,
             icon: this.myIcon
